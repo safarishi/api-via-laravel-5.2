@@ -2,7 +2,7 @@
 
 namespace App\Exceptions;
 
-class VerificationException extends ApiException
+class InvalidRequestException extends ApiException
 {
     public function __construct($msg)
     {
