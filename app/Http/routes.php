@@ -26,6 +26,7 @@ Route::get('/', function () {
 |
 */
 
-Route::group(['middleware' => ['web']], function () {
-    //
+Route::group(['middleware' => ['web'], 'prefix' => 'v1'], function () {
+    // route todo
+    // todo: add package for mongodb
 });
