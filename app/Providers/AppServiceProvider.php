@@ -13,7 +13,12 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $this->bootMiddleware();
+    }
+
+    private function bootMiddleware()
+    {
+        $this->app['router']->middleware('validation', 'App\Http\Middleware\ValidationMiddleware');
     }
 
     /**
