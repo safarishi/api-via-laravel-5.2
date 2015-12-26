@@ -26,6 +26,13 @@ Route::get('/', function () {
 |
 */
 
-Route::group(['middleware' => ['web'], 'prefix' => 'v1'], function () {
+Route::group(['middleware' => ['web']], function () {
     // route todo
+});
+
+Route::get('c', 'UserController@test');
+
+Route::group(['middleware' => ['api'], 'prefix' => 'v1'], function () {
+    // api 'throttle:60,1' 是可以在后面被覆盖的
+    // todo
 });
