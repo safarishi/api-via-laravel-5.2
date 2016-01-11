@@ -3,7 +3,6 @@
 Homestead.yaml
 Homestead.json
 .env
-/tests
 /storage
 composer.lock
 /database/migrations
