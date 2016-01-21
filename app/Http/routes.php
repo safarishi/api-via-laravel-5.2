@@ -27,10 +27,11 @@ Route::get('/', function () {
 */
 
 Route::group(['middleware' => ['web']], function () {
-    // route todo
+    // web route todo
 });
 
 Route::group(['middleware' => ['api'], 'prefix' => 'v1'], function () {
     // api 'throttle:60,1' 是可以在后面被覆盖的
-    // todo
+    Route::post('oauth/access_token', 'OAuthController@postAccessToken');
+    // api route todo
 });
