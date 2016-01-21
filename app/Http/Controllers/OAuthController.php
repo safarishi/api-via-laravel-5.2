@@ -6,6 +6,6 @@ class OAuthController extends ApiController
 {
     public function postAccessToken()
     {
-        $this->authorizer->issueAccessToken();
+        return $this->authorizer->issueAccessToken();
     }
 }
