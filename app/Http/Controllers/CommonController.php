@@ -4,5 +4,10 @@ namespace App\Http\Controllers;
 
 class CommonController extends ApiController
 {
-    // todo
+    protected function getOwnerId()
+    {
+        $this->authorizer->validateAccessToken();
+
+        return $this->authorizer->getResourceOwnerId();
+    }
 }
